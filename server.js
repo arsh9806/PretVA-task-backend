@@ -5,7 +5,6 @@ import Cors from "cors";
 
 
 const app = express();
-const port = process.env.port || 8001;
 const connectionUrl = `mongodb+srv://admin:XmiM4J7ncfJaRBX@cluster0.spy67.mongodb.net/pretva?retryWrites=true&w=majority`
 
 //Db config
@@ -53,5 +52,5 @@ app.get('/buyers', (req,res) => {
 
 
 //listener
-app.listen(port);
+app.listen(process.env.PORT || 8001);
 
